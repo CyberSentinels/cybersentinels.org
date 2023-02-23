@@ -1,6 +1,6 @@
 # CyberSentinels.org Website Source
 
-The source code for the [CyberSentinels](https://cybercentinels.org) website 
+The source code for the [CyberSentinels](https://cybersentinels.org/) website 
 
 ### Technologies used:
 - [CloudFlare](https://www.cloudflare.com/)
