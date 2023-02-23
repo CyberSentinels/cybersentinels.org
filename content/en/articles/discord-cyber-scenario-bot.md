@@ -6,12 +6,13 @@ date = 2023-02-23
 page_type = "post"
 
 # For description meta tag
-description = "Recipe of the legendary Krabby Patty."
+description = "Learn how to improve cybersecurity awareness with a Discord bot that generates randomly selected scenarios to prevent cyber attacks and respond to them."
 
 # Comment next line and the default banner wil be used.
 banner = '/img/An_image_of_a_stylized_shield_or_emblem_with_the_out.png'
 
 +++
+
 # discord-cyber-scenario-bot: A Tool for Cybersecurity Training and Awareness
 
 In today's digital age, the threat of cyber attacks is constantly increasing. To address this, it is crucial that individuals, organizations, and companies have the necessary knowledge and skills to prevent or respond to potential attacks. The discord-cyber-scenario-bot is an excellent tool for providing training and awareness in cybersecurity. This article will explore what the discord-cyber-scenario-bot is, how it works, and its benefits for cybersecurity training and awareness.
