@@ -1,0 +1,56 @@
+[tagged_in]
+other = "Marqués dans"
+
+[other_tags]
+other = "Autre tags"
+
+[read_more]
+other = "Lire plus"
+
+[name]
+other = "Nom"
+
+[your_message]
+other = "Votre message"
+
+[cancel]
+other = "Annuler"
+
+[submit]
+other = "Envoyer"
+
+[previous]
+other = "Précédent"
+
+[next]
+other = "Suivant"
+
+[back]
+other = "Retour"
+
+[contact]
+other = "Contact"
+
+[contact_email]
+other = "Contacter via email"
+
+[latest_post]
+other = "Dernier poste"
+
+[reading_time]
+other = "{{ .ReadingTime }} min de lecture"
+
+[home]
+other = "Accueil"
+
+[about]
+other = "À propos"
+
+[blog]
+other = "Blog"
+
+[present]
+other = "Aujourd'hui"
+
+[required_fields]
+other = "Champs obligatoires"

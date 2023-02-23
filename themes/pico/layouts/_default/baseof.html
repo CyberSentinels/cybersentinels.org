@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='{{ .Site.LanguageCode }}' class='{{ if eq .Site.Params.darkmode "always" }} dark {{ end }}'>
+
+<head>
+	{{ partial "head/metadata.html" . }}
+	{{ partial "head/js.html" . }}
+	{{ partial "head/css.html" . }}
+</head>
+
+<body class="min-h-screen bg-secondary-light dark:bg-secondary text-primary relative pb-24">
+	{{/* class dark to prevent purge css from purging it */}}
+	<div id="top" class="dark"></div>
+
+	{{- partial "dev/size-indicator.html" . -}}
+	{{- partial "header.html" . -}}
+
+	{{ $mainClass := "" }}
+	{{ if .IsHome }}
+	{{ $mainClass = "lg:max-w-5xl xl:max-w-6xl 2xl:max-w-screen-xl" }}
+	{{ end }}
+
+	<main class="w-full px-4 pt-8 mx-auto md:max-w-4xl overflow-x-hidden md:overflow-visible {{ $mainClass }}">
+		{{- block "main" . }}{{- end }}
+	</main>
+
+	<div class="absolute bottom-0 w-full">
+		{{- partial "footer.html" . -}}
+		{{/* {{- partial "dev/parameters.html" . -}} */}}
+	</div>
+</body>
+
+</html>

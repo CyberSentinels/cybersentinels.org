@@ -1,0 +1,31 @@
+[build]
+command = "cd exampleSite && hugo --gc -t repo --themesDir ../.. -b $URL"
+publish = "exampleSite/public/"
+
+[context.production.environment]
+HUGO_ENABLEGITINFO = "true"
+HUGO_ENV = "production"
+HUGO_VERSION = "0.79.0"
+NODE_VERSION = "v12.19.0"
+
+[context.split1]
+command = "hugo --gc --enableGitInfo"
+
+[context.split1.environment]
+HUGO_ENV = "production"
+HUGO_VERSION = "0.73.0"
+
+[context.deploy-preview]
+command = "hugo --gc --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.73.0"
+
+[context.branch-deploy]
+command = "hugo --gc -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+HUGO_VERSION = "0.73.0"
+
+[context.next.environment]
+HUGO_ENABLEGITINFO = "true"

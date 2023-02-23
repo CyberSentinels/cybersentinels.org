@@ -1,0 +1,66 @@
+<section id="contact">
+	<h1 class="text-center mx-auto max-w-4xl text-4xl sm:text-5xl md:text-6xl">
+		{{ .Title }}
+	</h1>
+	<div class="text-center mx-auto mb-8">
+		{{ .Content }}
+	</div>
+
+	<form class="w-full relative" method='{{ .Params.method | default "POST" }}' action="{{ .Params.action }}"
+		{{ if .Params.netlify }} data-netlify="true" {{ end }}>
+		{{ range .Params.Inputs }}
+
+		{{ $pattern := "" }}
+		{{ with .pattern }}
+		{{ $pattern = printf "pattern=%q" . | safeHTMLAttr}}
+		{{ end }}
+
+		{{ $minlength := "" }}
+		{{ $maxlength := "" }}
+		{{ with .minlength }}
+		{{ $minlength = printf "minlength=%q" . | safeHTMLAttr}}
+		{{ end }}
+		{{ with .maxlength }}
+		{{ $maxlength = printf "maxlength=%q" . | safeHTMLAttr}}
+		{{ end }}
+
+
+		<div>
+			{{ if .label }}
+			<div class="my-2 font-bold text-lg">
+				<label class="" for="{{ .name }}">{{ .label }}
+					{{ if .required }}
+					<span class="text-red-500 font-normal">*</span>
+					{{ end }}
+				</label>
+			</div>
+			{{ end }}
+			{{ $class := "bg-secondary-light border-secondary" }}
+			{{ if eq .type "textarea" }}
+			<textarea rows="5" {{ printf "name=%q" .name | safeHTMLAttr }} {{ printf "id=%q" .name | safeHTMLAttr }}
+				{{ printf "placeholder=%q" .placeholder | safeHTMLAttr }} {{ $minlength }} {{ $maxlength }}
+				{{ if .required }} required {{ end }} {{ printf "class='%s'" $class | safeHTMLAttr }}></textarea>
+			{{ else }}
+			{{ $type := .type | default "text" }}
+			<input {{ printf "type=%q" .type | safeHTMLAttr }} {{ printf "name=%q" .name | safeHTMLAttr }}
+				{{ printf "id=%q" .name | safeHTMLAttr }} {{ printf "placeholder=%q" .placeholder | safeHTMLAttr }}
+				{{ $pattern }} {{ if .required }} required {{ end }}
+				{{ printf "class='%s'" $class | safeHTMLAttr }}>
+			{{ end }}
+		</div>
+		{{ end }}
+
+		{{ if .Params.useEmail }}
+		{{ with .Site.Params.email }}
+		<a class="bg-secondary-dark dark:bg-secondary-light px-3 py-2 rounded-md mr-2 no-underline inline-block" href="mailto:{{ . }}">
+			{{ i18n "contact_email" }}
+		</a>
+		{{ end }}
+		{{ end }}
+
+		<div class="float-right">
+			<input type="reset" class="bg-secondary-dark dark:bg-secondary-light mr-2" value='{{ i18n "cancel" }}' />
+			<input type="submit" class="bg-primary text-secondary" value='{{ i18n "submit" }}' />
+		</div>
+	</form>
+</section>

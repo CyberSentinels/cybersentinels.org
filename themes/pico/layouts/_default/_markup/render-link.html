@@ -1,0 +1,12 @@
+{{/* Avoid overflow-x with word break */}}
+{{/* Useful for long URL */}}
+{{ $lineBreak := "" }}
+{{ if gt (len .Text) 48 }}
+{{ $lineBreak = "break-words" }}
+{{ end }}
+
+<a href="{{ .Destination | relURL | safeURL }}" {{ with .Title}} title="{{ . }}" {{ end }}
+	class="underline {{ $lineBreak }}" {{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener"
+	{{ end }}>
+	{{ .Text | safeHTML }}
+</a>

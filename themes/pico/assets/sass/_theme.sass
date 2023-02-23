@@ -1,0 +1,56 @@
+*
+	@apply no-blend
+
+*:focus-visible
+  @apply outline outline-accent outline-2
+
+html
+	@apply relative
+	scroll-behavior: smooth
+
+@media (prefers-reduced-motion: reduce) 
+  html 
+    scroll-behavior: auto
+
+*::selection
+	@apply bg-accent-light
+
+h1
+	@apply text-3xl font-serif my-6 tracking-tight
+
+h2
+	@apply text-xl font-bold my-3
+
+h3
+	@apply text-lg my-2
+
+hr
+	@apply border-t border-grey-300
+
+a
+	@apply underline
+
+a, a:hover
+	color: inherit
+
+p
+	@apply font-sans mt-4
+
+ul
+	list-style: initial
+	@apply pl-6 ml-8
+
+code
+	@apply bg-grey-100 p-1 rounded-md
+
+blockquote
+	@apply border-l-8 pl-4 
+
+input, textarea, button
+	@apply p-2 mb-4 rounded-md
+
+input:not([type='checkbox']):not([type='button']):not([type='submit']):not([type='reset']):not([type='color']):not([type='file']):not([type='hidden']):not([type='image']):not([type='radio']), textarea
+	@apply w-full border-2
+
+input[type='submit'], input[type='reset']
+	@apply cursor-pointer px-2

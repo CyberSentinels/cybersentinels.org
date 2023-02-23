@@ -1,0 +1,22 @@
+{{ $twitter_image := "" }}
+{{ if .Params.cover }}
+  {{ $twitter_image = ( .Params.cover | absURL )}}
+{{ else }}
+  {{ if .Params.images }}
+    {{ $twitter_image = index .Params.images 0 | absURL }}
+  {{ else }}
+    {{ $twitter_image = index $.Site.Params.images 0 | absURL }}
+  {{ end }}
+{{ end }}
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="{{ $twitter_image }}"/>
+<meta name="twitter:title" content="{{ .Title }}"/>
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>
+{{ with .Site.Social.twitter -}}
+<meta name="twitter:site" content="@{{ . }}"/>
+{{ end -}}
+{{ range .Site.Authors }}
+{{ with .twitter -}}
+<meta name="twitter:creator" content="@{{ . }}"/>
+{{ end -}}
+{{ end -}}
