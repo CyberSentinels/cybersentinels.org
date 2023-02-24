@@ -4,6 +4,7 @@ subtitle = ""
 tags = ["cybersecurity", "BlueTeamLabs", "BTLO", "parse-zilla", "json", "log reading", "incident response", "defensive security"]
 date = 2023-02-23
 page_type = "post"
+banner = '/img/An_image_of_a_stylized_shield_or_emblem_with_the_out.png'
 
 +++
 
