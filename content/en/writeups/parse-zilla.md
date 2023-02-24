@@ -5,6 +5,8 @@ tags = ["cybersecurity", "BlueTeamLabs", "BTLO", "parse-zilla", "json", "log rea
 date = 2023-02-23
 page_type = "post"
 
++++
+
 # Scenario
 DummyCompany has an internal service **dummycompany.localhost**  with which employees can do a variety of things. The Security Team was alerted for excessive requests from an internal IP and potential access to confidential files on this server due to a authentication/authorization misconfiguration. You have been tasked with analyzing the access logs (in JSON format) and answering the questions to prepare an initial report on this incident.
 
@@ -62,3 +64,5 @@ This command will search the entire log file for any instances of "RequestPath" 
 So, the name of the exposed directory containing files that the attacker identified is:
 
 /ftp/
+
+[Parse-Zilla by Amaterasu Security](https://medium.com/@amaterasu-sec/parse-zilla-amaterasu-security-c75245d7b074)
