@@ -15,3 +15,6 @@ The source code for the [CyberSentinels](https://cybersentinels.org/) website
     - Used for dynamic theme generation.
 - [Netlify](https://www.netlify.com/)
     - Used for Hosting, SSL Registration, Forms, Automated Hugo Site Generation
+
+
+![](https://discord.io/cybersentinels/badge)
