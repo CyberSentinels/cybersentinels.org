@@ -2,6 +2,14 @@
 
 The source code for the [CyberSentinels](https://cybersentinels.org/) website 
 
+<!-- Website -->
+<a href="https://cybersentinels.org">
+<img src="https://img.shields.io/badge/Website-Visit-<COLOR>?color=green" alt="Website">
+</a>
+<a href="https://discord.io/cybersentinels">
+<img src="https://img.shields.io/discord/1077773186772521011?label=Cyber%20Sentinels%20Discord&logo=discord&logoColor=white" alt="Discord">
+</a>
+
 ### Technologies used:
 - [CloudFlare](https://www.cloudflare.com/)
     - Used for Proxy, CDN, Caching, Country Blocking
@@ -15,6 +23,3 @@ The source code for the [CyberSentinels](https://cybersentinels.org/) website
     - Used for dynamic theme generation.
 - [Netlify](https://www.netlify.com/)
     - Used for Hosting, SSL Registration, Forms, Automated Hugo Site Generation
-
-
-![](https://discord.io/cybersentinels/badge)
