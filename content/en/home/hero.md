@@ -13,7 +13,7 @@ hero_media = "/img/An_image_of_a_stylized_shield_or_emblem_with_the_out.png"
 # Add as much button as you want
 [[btn]]
 	# The url of the button
-  url = "https://discord.io/cybersentinels"
+  url = "https://discord.gg/CYVe2CyrXk"
 	# The text of the button
   label = "Join the Discord"
 	# Primary color
