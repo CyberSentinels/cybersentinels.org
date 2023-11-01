@@ -94,9 +94,20 @@ to = "https://discord.gg/CYVe2CyrXk"
 status = 301
 force = true
 
-## REDIRECTS
+[[redirects]]
+from = "/discord/"
+to = "https://discord.gg/CYVe2CyrXk"
+status = 301
+force = true
+
 [[redirects]]
 from = "/github"
+to = "https://github.com/CyberSentinels"
+status = 301
+force = true
+
+[[redirects]]
+from = "/github/"
 to = "https://github.com/CyberSentinels"
 status = 301
 force = true
